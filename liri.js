@@ -28,7 +28,6 @@ function getTweets(){
             console.log("Date: " + tweets[i].created_at);
             console.log("Tweet: " + tweets[i].text);
             console.log("======================");
-
         }
       }
     });
@@ -66,7 +65,8 @@ function findSong(){
 
      spotify.search({ type: 'track', query: songRequest }, function(err, data) {
 
-            if ( err ) {
+            if ( !err ) {
+                console.log(data);
                 console.log('Error occurred: ' + err);
                 return;
             }     
